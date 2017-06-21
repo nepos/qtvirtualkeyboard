@@ -47,6 +47,9 @@ BaseKey {
     */
     readonly property int actionId: InputContext.hasEnterKeyAction(InputContext.inputItem) ? InputContext.inputItem.EnterKeyAction.actionId : EnterKeyAction.None
 
+    property string image: "images/btn_return.svg"
+    property string image_highlight: "images/btn_return_highlight.svg"
+
     text: "\n"
     displayText: InputContext.hasEnterKeyAction(InputContext.inputItem) ? InputContext.inputItem.EnterKeyAction.label : ""
     key: Qt.Key_Return
