@@ -210,6 +210,8 @@ QPlatformInputContext *QVirtualKeyboardPlugin::create(const QString &system, con
     qmlRegisterType(QUrl(componentsPath + QLatin1String("BaseKey.qml")), pluginUri, 2, 0, "BaseKey");
     qmlRegisterType(QUrl(componentsPath + QLatin1String("ChangeLanguageKey.qml")), pluginUri, 1, 0, "ChangeLanguageKey");
     qmlRegisterType(QUrl(componentsPath + QLatin1String("ChangeLanguageKey.qml")), pluginUri, 2, 0, "ChangeLanguageKey");
+    qmlRegisterType(QUrl(componentsPath + QLatin1String("ImageKey.qml")), pluginUri, 1, 0, "ImageKey");
+    qmlRegisterType(QUrl(componentsPath + QLatin1String("ImageKey.qml")), pluginUri, 2, 0, "ImageKey");
     qmlRegisterType(QUrl(componentsPath + QLatin1String("CharacterPreviewBubble.qml")), pluginUri, 1, 0, "CharacterPreviewBubble");
     qmlRegisterType(QUrl(componentsPath + QLatin1String("CharacterPreviewBubble.qml")), pluginUri, 2, 0, "CharacterPreviewBubble");
     qmlRegisterType(QUrl(componentsPath + QLatin1String("EnterKey.qml")), pluginUri, 1, 0, "EnterKey");
