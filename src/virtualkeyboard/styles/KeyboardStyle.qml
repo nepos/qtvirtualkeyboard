@@ -133,6 +133,12 @@ QtObject {
     */
     property Component languageKeyPanel: null
 
+    /*! Template for the image key.
+
+        \note The delegate must be based on the KeyPanel type.
+    */
+    property Component imageKeyPanel: null
+
     /*! Template for the enter key.
 
         \note The delegate must be based on the KeyPanel type.
