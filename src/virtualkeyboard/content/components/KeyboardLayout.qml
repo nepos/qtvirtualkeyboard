@@ -82,7 +82,7 @@ import QtQuick.VirtualKeyboard 2.1
     \endcode
 */
 
-ColumnLayout {
+RasterLayout {
     /*! Sets the input method to be used in this layout.
 
         This property allows a custom input method to be
@@ -143,6 +143,4 @@ ColumnLayout {
         in the layout hierarchy.
     */
     property bool smallTextVisible
-
-    spacing: 0
 }
