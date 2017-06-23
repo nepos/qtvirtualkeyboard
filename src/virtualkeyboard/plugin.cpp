@@ -238,8 +238,6 @@ QPlatformInputContext *QVirtualKeyboardPlugin::create(const QString &system, con
     qmlRegisterType(QUrl(componentsPath + QLatin1String("MultitapInputMethod.qml")), pluginUri, 2, 0, "MultitapInputMethod");
     qmlRegisterType(QUrl(componentsPath + QLatin1String("NumberKey.qml")), pluginUri, 1, 0, "NumberKey");
     qmlRegisterType(QUrl(componentsPath + QLatin1String("NumberKey.qml")), pluginUri, 2, 0, "NumberKey");
-    qmlRegisterType(QUrl(componentsPath + QLatin1String("ShiftKey.qml")), pluginUri, 1, 0, "ShiftKey");
-    qmlRegisterType(QUrl(componentsPath + QLatin1String("ShiftKey.qml")), pluginUri, 2, 0, "ShiftKey");
     qmlRegisterType(QUrl(componentsPath + QLatin1String("SpaceKey.qml")), pluginUri, 1, 0, "SpaceKey");
     qmlRegisterType(QUrl(componentsPath + QLatin1String("SpaceKey.qml")), pluginUri, 2, 0, "SpaceKey");
     qmlRegisterType(QUrl(componentsPath + QLatin1String("SymbolModeKey.qml")), pluginUri, 1, 0, "SymbolModeKey");
@@ -250,6 +248,17 @@ QPlatformInputContext *QVirtualKeyboardPlugin::create(const QString &system, con
     qmlRegisterType(QUrl(componentsPath + QLatin1String("WordCandidatePopupList.qml")), pluginUri, 2, 0, "WordCandidatePopupList");
     qmlRegisterType(QUrl(componentsPath + QLatin1String("LanguagePopupList.qml")), pluginUri, 2, 1, "LanguagePopupList");
     qmlRegisterType(QUrl(componentsPath + QLatin1String("SelectionControl.qml")), pluginUri, 2, 1, "SelectionControl");
+
+    qmlRegisterType(QUrl(componentsPath + QLatin1String("ShiftKeyLeft.qml")), pluginUri, 1, 0, "ShiftKeyLeft");
+    qmlRegisterType(QUrl(componentsPath + QLatin1String("ShiftKeyLeft.qml")), pluginUri, 2, 0, "ShiftKeyLeft");
+    qmlRegisterType(QUrl(componentsPath + QLatin1String("ShiftKeyRight.qml")), pluginUri, 1, 0, "ShiftKeyRight");
+    qmlRegisterType(QUrl(componentsPath + QLatin1String("ShiftKeyRight.qml")), pluginUri, 2, 0, "ShiftKeyRight");
+    qmlRegisterType(QUrl(componentsPath + QLatin1String("FunctionsKey.qml")), pluginUri, 1, 0, "FunctionsKey");
+    qmlRegisterType(QUrl(componentsPath + QLatin1String("FunctionsKey.qml")), pluginUri, 2, 0, "FunctionsKey");
+    qmlRegisterType(QUrl(componentsPath + QLatin1String("RasterLayout.qml")), pluginUri, 1, 0, "RasterLayout");
+    qmlRegisterType(QUrl(componentsPath + QLatin1String("RasterLayout.qml")), pluginUri, 2, 0, "RasterLayout");
+    qmlRegisterType(QUrl(componentsPath + QLatin1String("CursorKey.qml")), pluginUri, 1, 0, "CursorKey");
+    qmlRegisterType(QUrl(componentsPath + QLatin1String("CursorKey.qml")), pluginUri, 2, 0, "CursorKey");
 
     if (system.compare(system, QLatin1String(pluginName), Qt::CaseInsensitive) == 0) {
         platformInputContext = new PlatformInputContext();
