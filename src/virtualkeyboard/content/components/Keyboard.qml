@@ -724,7 +724,7 @@ Item {
             id: keyboardInnerContainer
             z: 1
             width: Math.round(keyboardBackground.width)
-            height: Math.round(style.keyboardDesignHeight * width / style.keyboardDesignWidth)
+            height: 420
             anchors.horizontalCenter: parent.horizontalCenter
 
             Loader {
