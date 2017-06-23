@@ -35,7 +35,8 @@ BaseKey {
     property string image: "images/btn_cursor.svg"
     property string image_highlight: "images/btn_cursor_highlight.svg"
 
-    text: String.fromCharCode(key)
+    displayText: ""
+    text: ""
 
     width: 72
     height: 64
