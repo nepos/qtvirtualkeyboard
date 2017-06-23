@@ -139,6 +139,26 @@ QtObject {
     */
     property Component imageKeyPanel: null
 
+    /*! Template for the cursor key.
+
+        \note The delegate must be based on the KeyPanel type.
+    */
+    property Component cursorKeyPanel: null
+
+    /*! Template for the functions key.
+
+        \note The delegate must be based on the KeyPanel type.
+    */
+
+    property Component functionsKeyPanel: null
+
+    /*! Template for the filler key.
+
+        \note The delegate must be based on the KeyPanel type.
+    */
+
+    property Component fillerKeyPanel: null
+
     /*! Template for the enter key.
 
         \note The delegate must be based on the KeyPanel type.
@@ -155,7 +175,13 @@ QtObject {
 
         \note The delegate must be based on the KeyPanel type.
     */
-    property Component shiftKeyPanel: null
+    property Component shiftKeyLeftPanel: null
+
+    /*! Template for the shift key.
+
+        \note The delegate must be based on the KeyPanel type.
+    */
+    property Component shiftKeyRightPanel: null
 
     /*! Template for the space key.
 

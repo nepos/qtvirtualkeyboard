@@ -20,27 +20,27 @@
 import QtQuick 2.0
 
 /*!
-    \qmltype ImageKey
+    \qmltype CursorKey
     \inqmlmodule QtQuick.VirtualKeyboard
     \ingroup qtvirtualkeyboard-qml
     \inherits BaseKey
 
     \brief Key based on an image, like an svg
 
-    Base for image based keys
+    Cursor keys
 */
 
 BaseKey {
 
-    property string image: "images/btn_main.svg"
-    property string image_highlight: "images/btn_main_highlight.svg"
+    property string image: "images/btn_cursor.svg"
+    property string image_highlight: "images/btn_cursor_highlight.svg"
 
     text: String.fromCharCode(key)
 
     width: 72
-    height: 72
+    height: 64
 
-    keyPanelDelegate: keyboard.style ? keyboard.style.imageKeyPanel: undefined
+    keyPanelDelegate: keyboard.style ? keyboard.style.cursorKeyPanel: undefined
 }
 
 
