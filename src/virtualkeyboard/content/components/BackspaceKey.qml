@@ -46,9 +46,12 @@ BaseKey {
     property string image: "images/btn_delete.svg"
     property string image_highlight: "images/btn_delete_highlight.svg"
 
+    width: 108
+    height: 64
+
     displayText: "Löschen"
     key: Qt.Key_Backspace
     repeat: true
     functionKey: true
-    keyPanelDelegate: keyboard.style ? keyboard.style.imageKeyPanel : undefined
+    keyPanelDelegate: keyboard.style ? keyboard.style.backspaceKeyPanel : undefined
 }
