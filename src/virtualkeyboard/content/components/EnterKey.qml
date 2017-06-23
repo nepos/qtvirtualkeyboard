@@ -50,8 +50,11 @@ BaseKey {
     property string image: "images/btn_return.svg"
     property string image_highlight: "images/btn_return_highlight.svg"
 
+    height: 145
+    width: 108
+
     text: "\n"
-    displayText: InputContext.hasEnterKeyAction(InputContext.inputItem) ? InputContext.inputItem.EnterKeyAction.label : ""
+    displayText: "Absatz"
     key: Qt.Key_Return
     showPreview: false
     highlighted: enabled && displayText.length > 0

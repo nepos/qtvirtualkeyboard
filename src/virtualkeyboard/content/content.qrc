@@ -20,7 +20,7 @@
         <file>components/MultiSoundEffect.qml</file>
         <file>components/MultitapInputMethod.qml</file>
         <file>components/NumberKey.qml</file>
-        <file>components/ShiftKey.qml</file>
+        <file>components/ShiftKeyLeft.qml</file>
         <file>components/SpaceKey.qml</file>
         <file>components/SymbolModeKey.qml</file>
         <file>components/TraceInputKey.qml</file>
@@ -31,5 +31,9 @@
         <file>components/SelectionControl.qml</file>
         <file>components/ShadowInputControl.qml</file>
         <file>components/ImageKey.qml</file>
+        <file>components/FunctionsKey.qml</file>
+        <file>components/RasterLayout.qml</file>
+        <file>components/ShiftKeyRight.qml</file>
+        <file>components/CursorKey.qml</file>
     </qresource>
 </RCC>

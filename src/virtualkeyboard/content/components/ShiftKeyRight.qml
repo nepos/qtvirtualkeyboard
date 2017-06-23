@@ -18,29 +18,33 @@
 ***/
 
 import QtQuick 2.0
+import QtQuick.VirtualKeyboard 2.1
 
 /*!
-    \qmltype ImageKey
+    \qmltype ShiftKeyRight
     \inqmlmodule QtQuick.VirtualKeyboard
     \ingroup qtvirtualkeyboard-qml
     \inherits BaseKey
 
-    \brief Key based on an image, like an svg
+    \brief Shift key for keyboard layouts.
 
-    Base for image based keys
+    This key changes the shift state of the keyboard.
 */
 
 BaseKey {
+    id: shiftKeyRight
 
-    property string image: "images/btn_main.svg"
-    property string image_highlight: "images/btn_main_highlight.svg"
-
-    text: String.fromCharCode(key)
+    property string image: "images/btn_shift_right.svg"
+    property string image_highlight: "images/btn_shift_right_highlight.svg"
 
     width: 72
-    height: 72
+    height: 64
 
-    keyPanelDelegate: keyboard.style ? keyboard.style.imageKeyPanel: undefined
+    key: Qt.Key_Shift
+    displayText: ""
+    enabled: InputContext.shiftHandler.toggleShiftEnabled
+    highlighted: InputContext.capsLock
+    functionKey: true
+    keyPanelDelegate: keyboard.style ? keyboard.style.shiftKeyLeftPanel : undefined
+    onClicked: InputContext.shiftHandler.toggleShift()
 }
-
-
