@@ -41,6 +41,12 @@ import QtQuick 2.0
 */
 
 Key {
+    property string image: "images/btn_space.svg"
+    property string image_highlight: "images/btn_space_highlight.svg"
+
+    width: 720
+    height: 64
+
     text: " "
     displayText: ""
     repeat: true
