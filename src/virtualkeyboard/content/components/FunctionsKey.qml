@@ -30,11 +30,11 @@ import QtQuick 2.0
 
 BaseKey {
 
+    id: functionsKey
+
     property string image: "images/btn_functions.svg"
     property string image_highlight: "images/btn_functions_highlight.svg"
-    property bool selected: false
-
-    onSelectedChanged: console.log(displayText + " selected: " + selected)
+    property bool highlight: false
 
     functionKey: true
     displayText: String.fromCharCode(key)
