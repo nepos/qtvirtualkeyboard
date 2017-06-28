@@ -32,6 +32,8 @@ import QtQuick.VirtualKeyboard 2.1
 
 KeyboardLayoutLoader {
 
+    id: keyboardLoader
+
     property int yRow1: 16
     property int yRow2: yRow1 + 80
     property int yRow3: yRow2 + 80
@@ -58,14 +60,7 @@ KeyboardLayoutLoader {
         return row1GetX(keyNr)
     }
 
-    property string selectedPage
-    onVisibleChanged: if (!visible) secondPage = false
-    sourceComponent: {
-        if (selectedPage === "emoticons") return emoticonsPage
-        else if (selectedPage === "special") return specialPage
-        else if (selectedPage === "umlaut") return umlautPage
-        else return mainPage
-    }
+    sourceComponent: mainPage
 
     Component {
         id: mainPage
@@ -344,13 +339,12 @@ KeyboardLayoutLoader {
                 displayText: "é å"
                 x: row5GetX(1)
                 y: yRow5
+                highlight: keyboardLoader.sourceComponent === umlautPage ? true : false
                 onClicked: {
-                    if (selectedPage == "umlaut") {
-                        selectedPage = "main"
-                        selected = false
+                    if (keyboardLoader.sourceComponent === umlautPage) {
+                        keyboardLoader.sourceComponent = mainPage
                     } else {
-                        selectedPage = "umlaut"
-                        selected = true
+                        keyboardLoader.sourceComponent = umlautPage
                     }
                 }
             }
@@ -360,13 +354,12 @@ KeyboardLayoutLoader {
                 displayText: "% ( ]"
                 x: row5GetX(2)
                 y: yRow5
+                highlight: keyboardLoader.sourceComponent === specialPage ? true : false
                 onClicked: {
-                    if (selectedPage == "special") {
-                        selectedPage = "main"
-                        selected = false
+                    if (keyboardLoader.sourceComponent === specialPage) {
+                        keyboardLoader.sourceComponent = mainPage
                     } else {
-                        selectedPage = "special"
-                        selected = true
+                        keyboardLoader.sourceComponent = specialPage
                     }
                 }
             }
@@ -376,13 +369,12 @@ KeyboardLayoutLoader {
                 displayText: "☺"
                 x: row5GetX(3)
                 y: yRow5
+                highlight: keyboardLoader.sourceComponent === emoticonsPage ? true : false
                 onClicked: {
-                    if (selectedPage == "emoticons") {
-                        selectedPage = "main"
-                        selected = false
+                    if (keyboardLoader.sourceComponent === emoticonsPage) {
+                        keyboardLoader.sourceComponent = mainPage
                     } else {
-                        selectedPage = "emoticons"
-                        selected = true
+                        keyboardLoader.sourceComponent = emoticonsPage
                     }
                 }
             }
@@ -684,13 +676,12 @@ KeyboardLayoutLoader {
                 displayText: "é å"
                 x: row5GetX(1)
                 y: yRow5
+                highlight: keyboardLoader.sourceComponent === umlautPage ? true : false
                 onClicked: {
-                    if (selectedPage == "umlaut") {
-                        selectedPage = "main"
-                        selected = false
+                    if (keyboardLoader.sourceComponent === umlautPage) {
+                        keyboardLoader.sourceComponent = mainPage
                     } else {
-                        selectedPage = "umlaut"
-                        selected = true
+                        keyboardLoader.sourceComponent = umlautPage
                     }
                 }
             }
@@ -700,13 +691,12 @@ KeyboardLayoutLoader {
                 displayText: "% ( ]"
                 x: row5GetX(2)
                 y: yRow5
+                highlight: keyboardLoader.sourceComponent === specialPage ? true : false
                 onClicked: {
-                    if (selectedPage == "special") {
-                        selectedPage = "main"
-                        selected = false
+                    if (keyboardLoader.sourceComponent === specialPage) {
+                        keyboardLoader.sourceComponent = mainPage
                     } else {
-                        selectedPage = "special"
-                        selected = true
+                        keyboardLoader.sourceComponent = specialPage
                     }
                 }
             }
@@ -716,13 +706,12 @@ KeyboardLayoutLoader {
                 displayText: "☺"
                 x: row5GetX(3)
                 y: yRow5
+                highlight: keyboardLoader.sourceComponent === emoticonsPage ? true : false
                 onClicked: {
-                    if (selectedPage == "emoticons") {
-                        selectedPage = "main"
-                        selected = false
+                    if (keyboardLoader.sourceComponent === emoticonsPage) {
+                        keyboardLoader.sourceComponent = mainPage
                     } else {
-                        selectedPage = "emoticons"
-                        selected = true
+                        keyboardLoader.sourceComponent = emoticonsPage
                     }
                 }
             }
@@ -1024,13 +1013,12 @@ KeyboardLayoutLoader {
                 displayText: "é å"
                 x: row5GetX(1)
                 y: yRow5
+                highlight: keyboardLoader.sourceComponent === umlautPage ? true : false
                 onClicked: {
-                    if (selectedPage == "umlaut") {
-                        selectedPage = "main"
-                        selected = false
+                    if (keyboardLoader.sourceComponent === umlautPage) {
+                        keyboardLoader.sourceComponent = mainPage
                     } else {
-                        selectedPage = "umlaut"
-                        selected = true
+                        keyboardLoader.sourceComponent = umlautPage
                     }
                 }
             }
@@ -1040,13 +1028,12 @@ KeyboardLayoutLoader {
                 displayText: "% ( ]"
                 x: row5GetX(2)
                 y: yRow5
+                highlight: keyboardLoader.sourceComponent === specialPage ? true : false
                 onClicked: {
-                    if (selectedPage == "special") {
-                        selectedPage = "main"
-                        selected = false
+                    if (keyboardLoader.sourceComponent === specialPage) {
+                        keyboardLoader.sourceComponent = mainPage
                     } else {
-                        selectedPage = "special"
-                        selected = true
+                        keyboardLoader.sourceComponent = specialPage
                     }
                 }
             }
@@ -1056,13 +1043,12 @@ KeyboardLayoutLoader {
                 displayText: "☺"
                 x: row5GetX(3)
                 y: yRow5
+                highlight: keyboardLoader.sourceComponent === emoticonsPage ? true : false
                 onClicked: {
-                    if (selectedPage == "emoticons") {
-                        selectedPage = "main"
-                        selected = false
+                    if (keyboardLoader.sourceComponent === emoticonsPage) {
+                        keyboardLoader.sourceComponent = mainPage
                     } else {
-                        selectedPage = "emoticons"
-                        selected = true
+                        keyboardLoader.sourceComponent = emoticonsPage
                     }
                 }
             }
@@ -1372,13 +1358,12 @@ KeyboardLayoutLoader {
                 displayText: "é å"
                 x: row5GetX(1)
                 y: yRow5
+                highlight: keyboardLoader.sourceComponent === umlautPage ? true : false
                 onClicked: {
-                    if (selectedPage == "umlaut") {
-                        selectedPage = "main"
-                        selected = false
+                    if (keyboardLoader.sourceComponent === umlautPage) {
+                        keyboardLoader.sourceComponent = mainPage
                     } else {
-                        selectedPage = "umlaut"
-                        selected = true
+                        keyboardLoader.sourceComponent = umlautPage
                     }
                 }
             }
@@ -1388,13 +1373,12 @@ KeyboardLayoutLoader {
                 displayText: "% ( ]"
                 x: row5GetX(2)
                 y: yRow5
+                highlight: keyboardLoader.sourceComponent === specialPage ? true : false
                 onClicked: {
-                    if (selectedPage == "special") {
-                        selectedPage = "main"
-                        selected = false
+                    if (keyboardLoader.sourceComponent === specialPage) {
+                        keyboardLoader.sourceComponent = mainPage
                     } else {
-                        selectedPage = "special"
-                        selected = true
+                        keyboardLoader.sourceComponent = specialPage
                     }
                 }
             }
@@ -1404,13 +1388,12 @@ KeyboardLayoutLoader {
                 displayText: "☺"
                 x: row5GetX(3)
                 y: yRow5
+                highlight: keyboardLoader.sourceComponent === emoticonsPage ? true : false
                 onClicked: {
-                    if (selectedPage == "emoticons") {
-                        selectedPage = "main"
-                        selected = false
+                    if (keyboardLoader.sourceComponent === emoticonsPage) {
+                        keyboardLoader.sourceComponent = mainPage
                     } else {
-                        selectedPage = "emoticons"
-                        selected = true
+                        keyboardLoader.sourceComponent = emoticonsPage
                     }
                 }
             }
