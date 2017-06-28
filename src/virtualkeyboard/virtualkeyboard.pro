@@ -65,6 +65,7 @@ HEADERS += platforminputcontext.h \
 RESOURCES += \
     content/styles/default/default_style.qrc \
     content/styles/retro/retro_style.qrc \
+    content/styles/nepos/nepos_style.qrc \
     content/content.qrc
 
 # Fallback for languages which don't have these special layouts
@@ -289,6 +290,7 @@ DEFINES += QT_VIRTUALKEYBOARD_DEFAULT_LAYOUTS_DIR=\\\"qrc:/QtQuick/VirtualKeyboa
 OTHER_FILES += \
     content/styles/default/*.qml \
     content/styles/retro/*.qml \
+    content/styles/nepos/*.qml \
     content/*.qml \
     content/components/*.qml \
     qtvirtualkeyboard.json
