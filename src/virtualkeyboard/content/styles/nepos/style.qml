@@ -32,6 +32,9 @@ KeyboardStyle {
     readonly property real keyContentMargin: 0 //Math.round(45 * scaleHint)
     readonly property real keyIconScale: scaleHint * 0.6
 
+    readonly property string resourcePath: "QtQuick/VirtualKeyboard/content/styles/nepos/"
+    readonly property string resourcePrefix: "qrc:/" + resourcePath
+
 
     // Nepos color values
     readonly property string neposKeyboardBackgroundColor: "#000000"
@@ -127,85 +130,19 @@ KeyboardStyle {
         ]
     }
 
-
-    // standard key
-    /*
-    keyPanel: KeyPanel {
-
-        FontLoader {
-            id: neposFont
-            source: "fonts/Roboto-Medium.ttf"
-        }
-
-        Rectangle {
-            id: keyBackground
-            //anchors.centerIn: parent
-            width: 72
-            height: 72
-            radius: width*0.5
-            color:  "green" //neposDefaultBackgroundColor
-        }
-
-        Text {
-            id: keyText
-
-            anchors.centerIn: keyBackground
-            smooth: false
-            text: control.displayText
-            color: neposFontColorBright
-
-            horizontalAlignment: Text.AlignHCenter
-            verticalAlignment: Text.AlignVCenter
-
-            font {
-                family: neposFont.name
-                weight: Font.Normal
-                pixelSize: 52 * scaleHint
-                capitalization: control.uppercased ? Font.AllUppercase : Font.MixedCase
-            }
-        }
-
-        states: [
-            State {
-                name: "pressed"
-                when: control.pressed
-                PropertyChanges {
-                    target: keyBackground
-                    color: neposHighlightColor
-                }
-            },
-            State {
-                name: "released"
-                when: !control.pressed
-                PropertyChanges {
-                    target: keyBackground
-                    color:  "green" //neposDefaultBackgroundColor
-                }
-            }
-        ]
-
-        transitions: Transition {
-            from: "pressed"
-            to: "released"
-            PropertyAnimation { target: keyBackground; property: "color"; duration: neposKeyReleaseAnimationDuration }
-        }
-    }
-    */
-
-
     // image key panel
     imageKeyPanel: KeyPanel {
 
         FontLoader {
             id: neposFont
-            source: "fonts/Roboto-Medium.ttf"
+            source: resourcePrefix + "fonts/Roboto-Medium.ttf"
         }
 
         Image {
             id: imageKeyIcon
             anchors.centerIn: parent
             smooth: false
-            source: control.image
+            source: resourcePrefix + control.image
             width: 72
             height: 72
         }
@@ -214,7 +151,7 @@ KeyboardStyle {
             id: imageKeyIconHighlight
             anchors.centerIn: parent
             smooth: false
-            source: control.image_highlight
+            source: resourcePrefix + control.image_highlight
             width: 72
             height: 72
         }
@@ -276,14 +213,14 @@ KeyboardStyle {
 
         FontLoader {
             id: neposFont
-            source: "fonts/Roboto-Medium.ttf"
+            source: resourcePrefix + "fonts/Roboto-Medium.ttf"
         }
 
         Image {
             id: cursorKeyIcon
             anchors.centerIn: parent
             smooth: false
-            source: control.image
+            source: resourcePrefix + control.image
             width: 72
             height: 64
         }
@@ -292,7 +229,7 @@ KeyboardStyle {
             id: cursorKeyIconHighlight
             anchors.centerIn: parent
             smooth: false
-            source: control.image_highlight
+            source: resourcePrefix + control.image_highlight
             width: 72
             height: 64
         }
@@ -301,10 +238,10 @@ KeyboardStyle {
             id: cursorIcon
             anchors.centerIn: parent
             source: {
-                if (control.key === Qt.Key_Left) "images/icon_arrow_left.svg"
-                if (control.key === Qt.Key_Right) "images/icon_arrow_right.svg"
-                if (control.key === Qt.Key_Up) "images/icon_arrow_up.svg"
-                if (control.key === Qt.Key_Down) "images/icon_arrow_down.svg"
+                if (control.key === Qt.Key_Left) resourcePrefix + "images/icon_arrow_left.svg"
+                if (control.key === Qt.Key_Right) resourcePrefix + "images/icon_arrow_right.svg"
+                if (control.key === Qt.Key_Up) resourcePrefix + "images/icon_arrow_up.svg"
+                if (control.key === Qt.Key_Down) resourcePrefix + "images/icon_arrow_down.svg"
             }
             width: 72
             height: 64
@@ -350,14 +287,14 @@ KeyboardStyle {
 
         FontLoader {
             id: neposFont
-            source: "fonts/Roboto-Medium.ttf"
+            source: resourcePrefix + "fonts/Roboto-Medium.ttf"
         }
 
         Image {
             id: functionsKeyIcon
             anchors.centerIn: parent
             smooth: false
-            source: control.image
+            source: resourcePrefix + control.image
             width: 72
             height: 64
         }
@@ -366,7 +303,7 @@ KeyboardStyle {
             id: functionsKeyIconHighlight
             anchors.centerIn: parent
             smooth: false
-            source: control.image_highlight
+            source: resourcePrefix + control.image_highlight
             width: 72
             height: 64
         }
@@ -427,7 +364,7 @@ KeyboardStyle {
 
         FontLoader {
             id: neposFont
-            source: "fonts/Roboto-Medium.ttf"
+            source: resourcePrefix + "fonts/Roboto-Medium.ttf"
         }
 
         Image {
@@ -435,7 +372,7 @@ KeyboardStyle {
             anchors.top: parent.top
             anchors.left: parent.left
             smooth: false
-            source: control.image
+            source: resourcePrefix + control.image
             width: 108
             height: 145
         }
@@ -445,7 +382,7 @@ KeyboardStyle {
             anchors.top: parent.top
             anchors.left: parent.left
             smooth: false
-            source: control.image_highlight
+            source: resourcePrefix + control.image_highlight
             width: 108
             height: 145
         }
@@ -521,7 +458,7 @@ KeyboardStyle {
                 sourceSize.width: 144 * keyIconScale
                 sourceSize.height: 144 * keyIconScale
                 smooth: false
-                source: "images/globe-868482.svg"
+                source: resourcePrefix + "images/globe-868482.svg"
             }
         }
         states: [
@@ -565,7 +502,7 @@ KeyboardStyle {
                 sourceSize.width: 144 * keyIconScale
                 sourceSize.height: 127 * keyIconScale
                 smooth: false
-                source: "images/hidekeyboard-868482.svg"
+                source: resourcePrefix + "images/hidekeyboard-868482.svg"
             }
         }
         states: [
@@ -600,21 +537,21 @@ KeyboardStyle {
 
         FontLoader {
             id: neposFont
-            source: "fonts/Roboto-Medium.ttf"
+            source: resourcePrefix + "fonts/Roboto-Medium.ttf"
         }
 
         Image {
             id: shiftKeyLeftIcon
             anchors.centerIn: parent
             smooth: false
-            source: control.image
+            source: resourcePrefix + control.image
         }
 
         Image {
             id: shiftKeyLeftIconHighlight
             anchors.centerIn: parent
             smooth: false
-            source: control.image_highlight
+            source: resourcePrefix + control.image_highlight
         }
 
         Image {
@@ -628,7 +565,7 @@ KeyboardStyle {
             anchors.topMargin: 15
             anchors.leftMargin: 17
 
-            source: "images/icon_shift.svg"
+            source: resourcePrefix + "images/icon_shift.svg"
 
         }
 
@@ -697,21 +634,21 @@ KeyboardStyle {
 
         FontLoader {
             id: neposFont
-            source: "fonts/Roboto-Medium.ttf"
+            source: resourcePrefix + "fonts/Roboto-Medium.ttf"
         }
 
         Image {
             id: shiftKeyRightIcon
             anchors.centerIn: parent
             smooth: false
-            source: control.image
+            source: resourcePrefix + control.image
         }
 
         Image {
             id: shiftKeyRightIconHighlight
             anchors.centerIn: parent
             smooth: false
-            source: control.image_highlight
+            source: resourcePrefix + control.image_highlight
         }
 
         Text {
@@ -779,21 +716,21 @@ KeyboardStyle {
 
         FontLoader {
             id: neposFont
-            source: "fonts/Roboto-Medium.ttf"
+            source: resourcePrefix + "fonts/Roboto-Medium.ttf"
         }
 
         Image {
             id: backspaceKeyIcon
             anchors.centerIn: parent
             smooth: false
-            source: control.image
+            source: resourcePrefix + control.image
         }
 
         Image {
             id: backspaceKeyIconHighlight
             anchors.centerIn: parent
             smooth: false
-            source: control.image_highlight
+            source: resourcePrefix + control.image_highlight
         }
 
         Text {
@@ -859,14 +796,14 @@ KeyboardStyle {
 
         FontLoader {
             id: neposFont
-            source: "fonts/Roboto-Medium.ttf"
+            source: resourcePrefix + "fonts/Roboto-Medium.ttf"
         }
 
         Image {
             id: spaceKeyIcon
             anchors.centerIn: parent
             smooth: false
-            source: control.image
+            source: resourcePrefix + control.image
             width: 720
             height: 64
         }
@@ -875,7 +812,7 @@ KeyboardStyle {
             id: spaceKeyIconHighlight
             anchors.centerIn: parent
             smooth: false
-            source: control.image_highlight
+            source: resourcePrefix + control.image_highlight
             width: 720
             height: 64
         }
@@ -1171,7 +1108,7 @@ KeyboardStyle {
 
     selectionHandle: Image {
         sourceSize.width: 20
-        source: "images/selectionhandle-bottom.svg"
+        source: resourcePrefix + "images/selectionhandle-bottom.svg"
     }
 }
 
