@@ -122,6 +122,7 @@ QPlatformInputContext *QVirtualKeyboardPlugin::create(const QString &system, con
     Q_INIT_RESOURCE(content);
     Q_INIT_RESOURCE(default_style);
     Q_INIT_RESOURCE(retro_style);
+    Q_INIT_RESOURCE(nepos_style);
 #ifdef HAVE_T9WRITE
     Q_INIT_RESOURCE(t9write_db);
 #endif

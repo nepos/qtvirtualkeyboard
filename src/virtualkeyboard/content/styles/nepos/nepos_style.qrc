@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/QtQuick/VirtualKeyboard/content/styles/nepos">
+        <file>style.qml</file>
+        <file>images/btn_cursor_highlight.svg</file>
+        <file>images/btn_cursor.svg</file>
+        <file>images/btn_delete_highlight.svg</file>
+        <file>images/btn_delete.svg</file>
+        <file>images/btn_functions_highlight.svg</file>
+        <file>images/btn_functions.svg</file>
+        <file>images/btn_main_highlight.svg</file>
+        <file>images/btn_main.svg</file>
+        <file>images/btn_return_highlight.svg</file>
+        <file>images/btn_return.svg</file>
+        <file>images/btn_shift_left_highlight.svg</file>
+        <file>images/btn_shift_left.svg</file>
+        <file>images/btn_shift_right_highlight.svg</file>
+        <file>images/btn_shift_right.svg</file>
+        <file>images/btn_space_highlight.svg</file>
+        <file>images/btn_space.svg</file>
+        <file>images/icon_arrow_down.svg</file>
+        <file>images/icon_arrow_left.svg</file>
+        <file>images/icon_arrow_right.svg</file>
+        <file>images/icon_arrow_up.svg</file>
+        <file>images/icon_shift.svg</file>
+	<file>fonts/Roboto-Medium.ttf</file>
+    </qresource>
+</RCC>
