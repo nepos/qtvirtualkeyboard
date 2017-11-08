@@ -18,7 +18,7 @@
 ***/
 
 
-import QtQuick 2.0
+import QtQuick 2.7
 import QtQuick.VirtualKeyboard 2.1
 import QtQuick.VirtualKeyboard.Styles 2.1
 
@@ -68,6 +68,8 @@ KeyboardStyle {
             color: "#383533"
             //anchors.fill: parent
             anchors.margins: keyBackgroundMargin
+
+
             Text {
                 id: keySmallText
                 text: control.smallText
@@ -101,6 +103,23 @@ KeyboardStyle {
                     capitalization: control.uppercased ? Font.AllUppercase : Font.MixedCase
                 }
             }
+
+            Rectangle {
+                clip: true
+                width: 64
+                height: 64
+
+                Image {
+                    id: emoticon
+                    anchors.centerIn: parent
+                    //fillMode: Image.Pad
+                    smooth: false
+                    source: "https://a.slack-edge.com/bfaba/img/emoji_2016_06_08/sheet_apple_64_indexed_256colors.png"
+                    //width: 64
+                    //height: 64
+                }
+            }
+
         }
         states: [
             State {
@@ -156,12 +175,21 @@ KeyboardStyle {
             height: 72
         }
 
+        Image {
+            id: imageKeyIconEmoji
+            anchors.centerIn: parent
+            source: "image://sprite/1/1"
+            width: 48
+            height: 48
+        }
+
+        /*
         Text {
             id: imageKeyText
             anchors.centerIn: parent
             smooth: false
 
-            text: control.displayText
+            text:  control.displayText
             color: neposFontColorBright
 
             horizontalAlignment: Text.AlignHCenter
@@ -173,6 +201,7 @@ KeyboardStyle {
                 capitalization: control.uppercased ? Font.AllUppercase : Font.MixedCase
             }
         }
+        */
 
         states: [
             State {
@@ -313,7 +342,7 @@ KeyboardStyle {
             anchors.centerIn: parent
             smooth: false
 
-            text:  control.displayText
+            text: control.displayText
             color: neposFontColorDark
 
             horizontalAlignment: Text.AlignHCenter
@@ -1104,11 +1133,6 @@ KeyboardStyle {
 
     popupListRemove: Transition {
         NumberAnimation { property: "opacity"; to: 0; duration: 200 }
-    }
-
-    selectionHandle: Image {
-        sourceSize.width: 20
-        source: resourcePrefix + "images/selectionhandle-bottom.svg"
     }
 }
 
