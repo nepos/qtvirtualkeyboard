@@ -339,7 +339,7 @@ KeyboardLayoutLoader {
                 displayText: "é å"
                 x: row5GetX(1)
                 y: yRow5
-                highlight: keyboardLoader.sourceComponent === umlautPage ? true : false
+                highlight: keyboardLoader.sourceComponent === umlautPage ? 1 : false
                 onClicked: {
                     if (keyboardLoader.sourceComponent === umlautPage) {
                         keyboardLoader.sourceComponent = mainPage
@@ -354,7 +354,7 @@ KeyboardLayoutLoader {
                 displayText: "% ( ]"
                 x: row5GetX(2)
                 y: yRow5
-                highlight: keyboardLoader.sourceComponent === specialPage ? true : false
+                highlight: keyboardLoader.sourceComponent === specialPage ? 1 : false
                 onClicked: {
                     if (keyboardLoader.sourceComponent === specialPage) {
                         keyboardLoader.sourceComponent = mainPage
@@ -369,7 +369,7 @@ KeyboardLayoutLoader {
                 displayText: "☺"
                 x: row5GetX(3)
                 y: yRow5
-                highlight: keyboardLoader.sourceComponent === emoticonsPage ? true : false
+                highlight: keyboardLoader.sourceComponent === emoticonsPage ? 1 : false
                 onClicked: {
                     if (keyboardLoader.sourceComponent === emoticonsPage) {
                         keyboardLoader.sourceComponent = mainPage
@@ -408,66 +408,79 @@ KeyboardLayoutLoader {
             //Row 1
             ImageKey {
                 key: 0x1f600
+                is_emoticon: 1
                 x: row1GetX(1)
                 y: yRow1
             }
             ImageKey {
                 key: 0x1f602
+                is_emoticon: 1
                 x: row1GetX(2)
                 y: yRow1
             }
             ImageKey {
                 key: 0x1f60a
+                is_emoticon: 1
                 x: row1GetX(3)
                 y: yRow1
             }
             ImageKey {
                 key: 0x1f609
+                is_emoticon: 1
                 x: row1GetX(4)
                 y: yRow1
             }
             ImageKey {
                 key: 0x1f60b
+                is_emoticon: 1
                 x: row1GetX(5)
                 y: yRow1
             }
             ImageKey {
                 key: 0x1f60d
+                is_emoticon: 1
                 x: row1GetX(6)
                 y: yRow1
             }
             ImageKey {
                 key: 0x1f618
+                is_emoticon: 1
                 x: row1GetX(7)
                 y: yRow1
             }
             ImageKey {
                 key: 0x1f61c
+                is_emoticon: 1
                 x: row1GetX(8)
                 y: yRow1
             }
             ImageKey {
                 key: 0x1f607
+                is_emoticon: 1
                 x: row1GetX(9)
                 y: yRow1
             }
             ImageKey {
                 key: 0x1f633
+                is_emoticon: 1
                 x: row1GetX(10)
                 y: yRow1
             }
             ImageKey {
                 key: 0x1f60e
+                is_emoticon: 1
                 x: row1GetX(11)
                 y: yRow1
             }
             ImageKey {
                 key: 0x1f634
+                is_emoticon: 1
                 x: row1GetX(12)
                 y: yRow1
             }
             ImageKey {
                 key: 0x1f632
+                is_emoticon: 1
                 x: row1GetX(13)
                 y: yRow1
             }
@@ -479,61 +492,73 @@ KeyboardLayoutLoader {
             //Row 2
             ImageKey {
                 key: 0x1f610
+                is_emoticon: 1
                 x: row2GetX(1)
                 y: yRow2
             }
             ImageKey {
                 key: 0x1f621
+                is_emoticon: 1
                 x: row2GetX(2)
                 y: yRow2
             }
             ImageKey {
                 key: 0x1f608
+                is_emoticon: 1
                 x: row2GetX(3)
                 y: yRow2
             }
             ImageKey {
                 key: 0x1f615
+                is_emoticon: 1
                 x: row2GetX(4)
                 y: yRow2
             }
             ImageKey {
                 key: 0x1f622
+                is_emoticon: 1
                 x: row2GetX(5)
                 y: yRow2
             }
             ImageKey {
                 key: 0x1f62d
+                is_emoticon: 1
                 x: row2GetX(6)
                 y: yRow2
             }
             ImageKey {
                 key: 0x1f62b
+                is_emoticon: 1
                 x: row2GetX(7)
                 y: yRow2
             }
             ImageKey {
                 key: 0x1f62c
+                is_emoticon: 1
                 x: row2GetX(8)
                 y: yRow2
             }
             ImageKey {
                 key: 0x1f44d
+                is_emoticon: 1
                 x: row2GetX(9)
                 y: yRow2
             }
             ImageKey {
                 key: 0x1f44e
+                is_emoticon: 1
                 x: row2GetX(10)
                 y: yRow2
             }
             ImageKey {
                 key: 0x270c
+                is_emoticon: 1
                 x: row2GetX(11)
                 y: yRow2
             }
             ImageKey {
                 key: 0x1f4aa
+                is_emoticon: 1
                 x: row2GetX(12)
                 y: yRow2
             }
@@ -545,61 +570,73 @@ KeyboardLayoutLoader {
             //Row 3
             ImageKey {
                 key: 0x1f444
+                is_emoticon: 1
                 x: row3GetX(1)
                 y: yRow3
             }
             ImageKey {
                 key: 0x1f4a9
+                is_emoticon: 1
                 x: row3GetX(2)
                 y: yRow3
             }
             ImageKey {
                 key: 0x26a1
+                is_emoticon: 1
                 x: row3GetX(3)
                 y: yRow3
             }
             ImageKey {
                 key: 0x2600
+                is_emoticon: 1
                 x: row3GetX(4)
                 y: yRow3
             }
             ImageKey {
                 key: 0x2614
+                is_emoticon: 1
                 x: row3GetX(5)
                 y: yRow3
             }
             ImageKey {
                 key: 0x1f4a8
+                is_emoticon: 1
                 x: row3GetX(6)
                 y: yRow3
             }
             ImageKey {
                 key: 0x2744
+                is_emoticon: 1
                 x: row3GetX(7)
                 y: yRow3
             }
             ImageKey {
                 key: 0x1f383
+                is_emoticon: 1
                 x: row3GetX(8)
                 y: yRow3
             }
             ImageKey {
                 key: 0x1f384
+                is_emoticon: 1
                 x: row3GetX(9)
                 y: yRow3
             }
             ImageKey {
                 key: 0x1f389
+                is_emoticon: 1
                 x: row3GetX(10)
                 y: yRow3
             }
             ImageKey {
                 key: 0x1f451
+                is_emoticon: 1
                 x: row3GetX(11)
                 y: yRow3
             }
             ImageKey {
                 key: 0x1f388
+                is_emoticon: 1
                 x: row3GetX(12)
                 y: yRow3
             }
@@ -611,51 +648,61 @@ KeyboardLayoutLoader {
             }
             ImageKey {
                 key: 0x1f370
+                is_emoticon: 1
                 x: row4GetX(1)
                 y: yRow4
             }
             ImageKey {
                 key: 0x1f382
+                is_emoticon: 1
                 x: row4GetX(2)
                 y: yRow4
             }
             ImageKey {
                 key: 0x1f377
+                is_emoticon: 1
                 x: row4GetX(3)
                 y: yRow4
             }
             ImageKey {
                 key: 0x1f378
+                is_emoticon: 1
                 x: row4GetX(4)
                 y: yRow4
             }
             ImageKey {
                 key: 0x1f37b
+                is_emoticon: 1
                 x: row4GetX(5)
                 y: yRow4
             }
             ImageKey {
                 key: 0x2764
+                is_emoticon: 1
                 x: row4GetX(6)
                 y: yRow4
             }
             ImageKey {
                 key: 0x1f494
+                is_emoticon: 1
                 x: row4GetX(7)
                 y: yRow4
             }
             ImageKey {
                 key: 0x1f3c1
+                is_emoticon: 1
                 x: row4GetX(8)
                 y: yRow4
             }
             ImageKey {
                 key: 0x1f192
+                is_emoticon: 1
                  x: row4GetX(9)
                 y: yRow4
             }
             ImageKey {
                 key: 0x1f197
+                is_emoticon: 1
                 x: row4GetX(10)
                 y: yRow4
             }
@@ -676,7 +723,7 @@ KeyboardLayoutLoader {
                 displayText: "é å"
                 x: row5GetX(1)
                 y: yRow5
-                highlight: keyboardLoader.sourceComponent === umlautPage ? true : false
+                highlight: keyboardLoader.sourceComponent === umlautPage ? 1 : false
                 onClicked: {
                     if (keyboardLoader.sourceComponent === umlautPage) {
                         keyboardLoader.sourceComponent = mainPage
@@ -691,7 +738,7 @@ KeyboardLayoutLoader {
                 displayText: "% ( ]"
                 x: row5GetX(2)
                 y: yRow5
-                highlight: keyboardLoader.sourceComponent === specialPage ? true : false
+                highlight: keyboardLoader.sourceComponent === specialPage ? 1 : false
                 onClicked: {
                     if (keyboardLoader.sourceComponent === specialPage) {
                         keyboardLoader.sourceComponent = mainPage
@@ -706,7 +753,7 @@ KeyboardLayoutLoader {
                 displayText: "☺"
                 x: row5GetX(3)
                 y: yRow5
-                highlight: keyboardLoader.sourceComponent === emoticonsPage ? true : false
+                highlight: keyboardLoader.sourceComponent === emoticonsPage ? 1 : false
                 onClicked: {
                     if (keyboardLoader.sourceComponent === emoticonsPage) {
                         keyboardLoader.sourceComponent = mainPage
@@ -1013,7 +1060,7 @@ KeyboardLayoutLoader {
                 displayText: "é å"
                 x: row5GetX(1)
                 y: yRow5
-                highlight: keyboardLoader.sourceComponent === umlautPage ? true : false
+                highlight: keyboardLoader.sourceComponent === umlautPage ? 1 : false
                 onClicked: {
                     if (keyboardLoader.sourceComponent === umlautPage) {
                         keyboardLoader.sourceComponent = mainPage
@@ -1028,7 +1075,7 @@ KeyboardLayoutLoader {
                 displayText: "% ( ]"
                 x: row5GetX(2)
                 y: yRow5
-                highlight: keyboardLoader.sourceComponent === specialPage ? true : false
+                highlight: keyboardLoader.sourceComponent === specialPage ? 1 : false
                 onClicked: {
                     if (keyboardLoader.sourceComponent === specialPage) {
                         keyboardLoader.sourceComponent = mainPage
@@ -1043,7 +1090,7 @@ KeyboardLayoutLoader {
                 displayText: "☺"
                 x: row5GetX(3)
                 y: yRow5
-                highlight: keyboardLoader.sourceComponent === emoticonsPage ? true : false
+                highlight: keyboardLoader.sourceComponent === emoticonsPage ? 1 : false
                 onClicked: {
                     if (keyboardLoader.sourceComponent === emoticonsPage) {
                         keyboardLoader.sourceComponent = mainPage
@@ -1358,7 +1405,7 @@ KeyboardLayoutLoader {
                 displayText: "é å"
                 x: row5GetX(1)
                 y: yRow5
-                highlight: keyboardLoader.sourceComponent === umlautPage ? true : false
+                highlight: keyboardLoader.sourceComponent === umlautPage ? 1 : false
                 onClicked: {
                     if (keyboardLoader.sourceComponent === umlautPage) {
                         keyboardLoader.sourceComponent = mainPage
@@ -1373,7 +1420,7 @@ KeyboardLayoutLoader {
                 displayText: "% ( ]"
                 x: row5GetX(2)
                 y: yRow5
-                highlight: keyboardLoader.sourceComponent === specialPage ? true : false
+                highlight: keyboardLoader.sourceComponent === specialPage ? 1 : false
                 onClicked: {
                     if (keyboardLoader.sourceComponent === specialPage) {
                         keyboardLoader.sourceComponent = mainPage
@@ -1388,7 +1435,7 @@ KeyboardLayoutLoader {
                 displayText: "☺"
                 x: row5GetX(3)
                 y: yRow5
-                highlight: keyboardLoader.sourceComponent === emoticonsPage ? true : false
+                highlight: keyboardLoader.sourceComponent === emoticonsPage ? 1 : false
                 onClicked: {
                     if (keyboardLoader.sourceComponent === emoticonsPage) {
                         keyboardLoader.sourceComponent = mainPage
