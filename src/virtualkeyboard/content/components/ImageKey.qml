@@ -30,12 +30,27 @@ import QtQuick 2.0
     Base for image based keys
 */
 
+
 BaseKey {
+
+    function codePointToString(codePoint) {
+
+        var chars = []
+        if (codePoint < 0x10000) {
+            chars.push(codePoint)
+        } else {
+            codePoint -= 0x10000
+            chars.push((codePoint>>10) + 0xD800)
+            chars.push((codePoint%0x400) + 0xDC00)
+        }
+        return String.fromCharCode.apply(undefined, chars)
+    }
 
     property string image: "images/btn_main.svg"
     property string image_highlight: "images/btn_main_highlight.svg"
+    property int is_emoticon: 0
 
-    text: String.fromCharCode(key)
+    text: codePointToString(key)
 
     width: 72
     height: 72
