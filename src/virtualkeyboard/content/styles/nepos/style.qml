@@ -175,21 +175,13 @@ KeyboardStyle {
             height: 72
         }
 
-        Image {
-            id: imageKeyIconEmoji
-            anchors.centerIn: parent
-            source: "image://sprite/1/1"
-            width: 48
-            height: 48
-        }
-
-        /*
         Text {
             id: imageKeyText
             anchors.centerIn: parent
             smooth: false
 
-            text:  control.displayText
+            text: control.displayText
+            //visible: !control.is_emoticon
             color: neposFontColorBright
 
             horizontalAlignment: Text.AlignHCenter
@@ -201,8 +193,21 @@ KeyboardStyle {
                 capitalization: control.uppercased ? Font.AllUppercase : Font.MixedCase
             }
         }
-        */
+/* If we use colored image, uncomment here and fill up hash table in instantiation of spriteImageProvider
+        Image {
+            id: imageKeyIconEmoji
+            anchors.centerIn: parent
+            source: {
+                if (control.is_emoticon)
+                    return "image://sprite/" + control.key
 
+                return ""
+            }
+            width: 48
+            height: 48
+            visible: control.is_emoticon
+        }
+*/
         states: [
             State {
                 name: "pressed"
