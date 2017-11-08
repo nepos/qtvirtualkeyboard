@@ -29,17 +29,13 @@ QPixmap SpriteImageProvider::requestPixmap(const QString &id, QSize *size, const
         params.at(1).toInt(&ok);
     // params contains unicodevalue, that has to be mapped to coordinates
     } else if (params.size() == 1) {
-        uint8_t unicodeValue = params.at(0).toInt(&ok);
+        int unicodeValue = params.at(0).toInt(&ok);
         auto point = m_xyForUnicode.value(unicodeValue);
         xIndex = point.x();
         yIndex = point.y();
-    } else {
-        qDebug() << "invalid parameter: " << id;
-        return QPixmap();
     }
 
     if (!ok || xIndex < 1 || yIndex < 1) {
-        qDebug() << "invalid parameter: " << id;
         return QPixmap();
     }
 
