@@ -29,6 +29,7 @@
 
 #include "styles_plugin.h"
 #include "svgimageprovider.h"
+#include "spriteimageprovider.h"
 
 #include <qqml.h>
 #include <QtCore/QLibraryInfo>
@@ -73,4 +74,18 @@ void QtVirtualKeyboardStylesPlugin::initializeEngine(QQmlEngine *engine, const c
 {
     Q_UNUSED(uri)
     engine->addImageProvider(QStringLiteral("qtvkbsvg"), new SvgImageProvider());
+
+    auto spriteImageProvider = new SpriteImageProvider();
+    spriteImageProvider->setIconHeight(64);
+    spriteImageProvider->setIconWidth(64);
+    spriteImageProvider->setImage("/home/paso/Downloads/sheet_apple_64_indexed_256colors.png");
+
+    spriteImageProvider->addUnicode(0x1f600, {27, 21});
+    spriteImageProvider->addUnicode(0x1f602, {27, 23});
+    spriteImageProvider->addUnicode(0x1f60a, {27, 31});
+    spriteImageProvider->addUnicode(0x1f609, {27, 30});
+
+
+
+    engine->addImageProvider(QStringLiteral("sprite"), spriteImageProvider);
 }
