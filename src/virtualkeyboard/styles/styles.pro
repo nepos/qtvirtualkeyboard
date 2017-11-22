@@ -6,10 +6,12 @@ CONFIG += no_cxx_module
 
 SOURCES += \
     svgimageprovider.cpp \
+    spriteimageprovider.cpp \
     styles_plugin.cpp
 
 HEADERS += \
     svgimageprovider.h \
+    spriteimageprovider.h \
     styles_plugin.h
 
 RESOURCES += \

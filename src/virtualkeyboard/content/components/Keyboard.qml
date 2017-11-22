@@ -50,8 +50,21 @@ Item {
     property int defaultLocaleIndex: -1
     property bool latinOnly: InputContext.inputMethodHints & Qt.ImhLatinOnly
     property bool preferNumbers: InputContext.inputMethodHints & Qt.ImhPreferNumbers
+
+    // 0 = main, 1 = umlaut, 2 = special, 3 = emoticons
+    property int neposPageSelect: 0
+    onNeposPageSelectChanged: {
+        console.log("d: " + neposPageSelect)
+
+    }
+
     property string layout
     property string layoutType: {
+        if (neposPageSelect == 0) return "main"
+        if (neposPageSelect == 1) return "umlaut"
+        if (neposPageSelect == 2) return "special"
+        if (neposPageSelect == 3) return "emoticons"
+
         if (keyboard.handwritingMode) return "handwriting"
         if (InputContext.inputMethodHints & Qt.ImhDialableCharactersOnly) return "dialpad"
         if (InputContext.inputMethodHints & Qt.ImhFormattedNumbersOnly) return "numbers"
@@ -731,7 +744,7 @@ Item {
             id: keyboardInnerContainer
             z: 1
             width: Math.round(keyboardBackground.width)
-            height: Math.round(style.keyboardDesignHeight * width / style.keyboardDesignWidth)
+            height: 420
             anchors.horizontalCenter: parent.horizontalCenter
 
             Loader {
