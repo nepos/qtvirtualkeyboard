@@ -78,14 +78,65 @@ void QtVirtualKeyboardStylesPlugin::initializeEngine(QQmlEngine *engine, const c
     auto spriteImageProvider = new SpriteImageProvider();
     spriteImageProvider->setIconHeight(64);
     spriteImageProvider->setIconWidth(64);
-    spriteImageProvider->setImage("/home/paso/Downloads/sheet_apple_64_indexed_256colors.png");
 
+    const QString path(QStringLiteral(":/QtQuick/VirtualKeyboard/content/styles/nepos/images/sheet_apple_64_indexed_256colors.png"));
+    spriteImageProvider->setImage(path);
+
+    // Row 1
     spriteImageProvider->addUnicode(0x1f600, {27, 21});
     spriteImageProvider->addUnicode(0x1f602, {27, 23});
     spriteImageProvider->addUnicode(0x1f60a, {27, 31});
     spriteImageProvider->addUnicode(0x1f609, {27, 30});
+    spriteImageProvider->addUnicode(0x1f60b, {27, 32});
+    spriteImageProvider->addUnicode(0x1f60d, {27, 34});
+    spriteImageProvider->addUnicode(0x1f618, {28,  4});
+    spriteImageProvider->addUnicode(0x1f61c, {28,  8});
+    spriteImageProvider->addUnicode(0x1f607, {27, 28});
+    spriteImageProvider->addUnicode(0x1f633, {28, 31});
+    spriteImageProvider->addUnicode(0x1f60e, {27, 35});
+    spriteImageProvider->addUnicode(0x1f634, {28, 32});
+    spriteImageProvider->addUnicode(0x1f632, {28, 30});
 
+    // Row 2
+    spriteImageProvider->addUnicode(0x1f610, {27, 37});
+    spriteImageProvider->addUnicode(0x1f621, {28, 13});
+    spriteImageProvider->addUnicode(0x1f608, {28, 29});
+    spriteImageProvider->addUnicode(0x1f615, {28, 01});
+    spriteImageProvider->addUnicode(0x1f622, {28, 22});
+    spriteImageProvider->addUnicode(0x1f62D, {28, 25});
+    spriteImageProvider->addUnicode(0x1f62B, {28, 23});
+    spriteImageProvider->addUnicode(0x1f62C, {28, 24});
+    spriteImageProvider->addUnicode(0x1f44d, {16, 10});
+    spriteImageProvider->addUnicode(0x1f44e, {16, 16});
+    spriteImageProvider->addUnicode( 0x270c, { 4, 22});
+    spriteImageProvider->addUnicode(0x1f4aa, {21, 23});
 
+    // Row 3
+    spriteImageProvider->addUnicode(0x1f444, {20, 33});
+    spriteImageProvider->addUnicode(0x1f4a9, {21, 22});
+    spriteImageProvider->addUnicode(0x26a1,  { 3, 14});
+    spriteImageProvider->addUnicode(0x2600,  { 2,  1});
+    spriteImageProvider->addUnicode(0x2614,  { 2,  3});
+    spriteImageProvider->addUnicode(0x1f4a8, { 7, 23});
+    spriteImageProvider->addUnicode(0x2744 , { 5,  2});
+    spriteImageProvider->addUnicode(0x1f383, { 9, 28});
+    spriteImageProvider->addUnicode(0x1f384, { 9, 29});
+    spriteImageProvider->addUnicode(0x1f389, { 9, 39});
+    spriteImageProvider->addUnicode(0x1f451, {16, 34});
+    spriteImageProvider->addUnicode(0x1f388, { 9, 38});
+
+    // Row 4
+    spriteImageProvider->addUnicode(0x1f370, { 9,  9});
+    spriteImageProvider->addUnicode(0x1f382, { 9, 27});
+    spriteImageProvider->addUnicode(0x1f377, { 9, 16});
+    spriteImageProvider->addUnicode(0x1f378, { 9, 17});
+    spriteImageProvider->addUnicode(0x1f37B, { 9, 20});
+    spriteImageProvider->addUnicode(0x2764 , { 2, 41});
+    spriteImageProvider->addUnicode(0x1f494, {21,  1});
+    spriteImageProvider->addUnicode(0x1f3c1, {11,  8});
+    spriteImageProvider->addUnicode(0x1f192, { 5, 39});
+    spriteImageProvider->addUnicode(0x1f197, { 6,  3});
 
     engine->addImageProvider(QStringLiteral("sprite"), spriteImageProvider);
 }
+
