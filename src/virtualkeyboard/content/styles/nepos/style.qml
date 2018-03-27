@@ -181,7 +181,8 @@ KeyboardStyle {
             smooth: false
 
             text: control.displayText
-            //visible: !control.is_emoticon
+
+            visible: !control.is_emoticon
             color: neposFontColorBright
 
             horizontalAlignment: Text.AlignHCenter
@@ -193,7 +194,8 @@ KeyboardStyle {
                 capitalization: control.uppercased ? Font.AllUppercase : Font.MixedCase
             }
         }
-/* If we use colored image, uncomment here and fill up hash table in instantiation of spriteImageProvider
+
+        // If we use colored image, uncomment here and fill up hash table in instantiation of spriteImageProvider
         Image {
             id: imageKeyIconEmoji
             anchors.centerIn: parent
@@ -207,7 +209,7 @@ KeyboardStyle {
             height: 48
             visible: control.is_emoticon
         }
-*/
+
         states: [
             State {
                 name: "pressed"
