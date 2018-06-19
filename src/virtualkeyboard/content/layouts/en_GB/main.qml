@@ -697,7 +697,7 @@ KeyboardLayoutLoader {
             ImageKey {
                 key: 0x1f192
                 is_emoticon: 1
-                 x: row4GetX(9)
+                x: row4GetX(9)
                 y: yRow4
             }
             ImageKey {

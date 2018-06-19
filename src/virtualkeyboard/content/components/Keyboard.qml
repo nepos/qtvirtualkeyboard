@@ -56,24 +56,13 @@ Item {
     readonly property bool formattedNumbersOnly: InputContext.inputMethodHints & Qt.ImhFormattedNumbersOnly
     readonly property bool digitsOnly: InputContext.inputMethodHints & Qt.ImhDigitsOnly
 
-    // 0 = main, 1 = umlaut, 2 = special, 3 = emoticons
-    property int neposPageSelect: 0
-    onNeposPageSelectChanged: {
-        console.log("d: " + neposPageSelect)
-
-    }
-
     property string layout
     property string layoutType: {
-        if (neposPageSelect == 0) return "main"
-        if (neposPageSelect == 1) return "umlaut"
-        if (neposPageSelect == 2) return "special"
-        if (neposPageSelect == 3) return "emoticons"
 
+        if (keyboard.formattedNumbersOnly) return "numbers"
+        if (keyboard.digitsOnly) return "numbers"
         if (keyboard.handwritingMode) return "handwriting"
         if (keyboard.dialableCharactersOnly) return "dialpad"
-        if (keyboard.formattedNumbersOnly) return "numbers"
-        if (keyboard.digitsOnly) return "digits"
         if (keyboard.symbolMode) return "symbols"
         return "main"
     }
